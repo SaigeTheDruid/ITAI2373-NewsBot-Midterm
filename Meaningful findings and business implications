@@ -1,4 +1,4 @@
-## 📊 Key Findings and Business Implications
+## Key Findings and Business Implications
 
 Through detailed analysis and model building across eight NLP modules, I discovered several important patterns and insights. These findings not only demonstrate technical outcomes but also offer clear business implications for real-world applications in media monitoring, content recommendation, and sentiment tracking.
 
@@ -33,7 +33,5 @@ Through detailed analysis and model building across eight NLP modules, I discove
 ### 8. **Lightweight Models Are Effective at Scale**
 - **Finding**: Despite running on Google Colab’s free tier, efficient preprocessing and classical ML models performed well.
 - **Business Implication**: Small teams or startups can deploy similar systems at low cost without relying on GPU-heavy deep learning models, making NLP-driven media intelligence accessible to more organizations.
-
----
 
 These findings illustrate how technical NLP work translates into practical outcomes for real-world applications in journalism, marketing, business intelligence, and public relations.
