@@ -1,0 +1,47 @@
+## 📜 Code Explanation
+
+### 1. Library Imports and Setup
+
+I began the project by importing all the necessary libraries for handling data, visualizing results, performing natural language processing, and training machine learning models. I used `pandas` and `numpy` for data manipulation, and `matplotlib` along with `seaborn` for creating visualizations. For natural language tasks, I relied on `nltk` and `spaCy` to perform tokenization, lemmatization, and entity recognition. I also brought in modules from `scikit-learn` to support classification tasks, model evaluation, and vectorization.
+
+---
+
+### 2. Downloading NLP Resources
+
+To prepare the environment for text processing, I downloaded key NLP resources using NLTK's built-in downloader. This included stopword lists, tokenizers, lemmatizers, and sentiment analysis tools like the VADER lexicon. These resources ensured that my text cleaning and analysis pipeline had access to the necessary linguistic tools required for deeper insights.
+
+---
+
+### 3. Installing Packages and spaCy Language Model
+
+Since I used Google Colab as my development environment, I made sure to install all required packages directly in the notebook. This included `spaCy`, `nltk`, `scikit-learn`, `matplotlib`, `seaborn`, and others. I also downloaded the English language model for spaCy (`en_core_web_sm`) so that I could use pre-trained models for tokenization, POS tagging, dependency parsing, and named entity recognition.
+
+---
+
+### 4. Mounting Google Drive and Extracting Dataset
+
+To access the dataset conveniently, I mounted my Google Drive within Colab. This allowed me to read the zip file directly from my drive without needing to re-upload it each time. I extracted the dataset into a temporary directory using Python’s `zipfile` module, which gave me access to the training and test CSV files inside.
+
+---
+
+### 5. Loading the Dataset
+
+Once the dataset was extracted, I loaded the training, testing, and sample solution CSV files into pandas DataFrames. Using `.head()` and `.info()`, I explored the structure and confirmed that the necessary fields—article text and category—were present. This gave me a clear starting point for building out the text processing pipeline.
+
+---
+
+### 6. Initial Data Cleaning and Exploration
+
+After loading the data, I checked for any missing values and reviewed the distribution of article categories using `.value_counts()`. This gave me an overview of how balanced the dataset was and helped me decide whether sampling or stratification would be needed later on. Ensuring data quality early was crucial before moving into modeling and analysis.
+
+---
+
+### 7. Data Preprocessing Pipeline
+
+I then created a preprocessing pipeline to clean the dataset. This involved dropping any rows where the article text or category was missing. If the dataset exceeded 2000 entries, I sampled it down to a manageable size to avoid memory issues in Colab. I standardized the column names to `content` and `category` to simplify references later in the notebook. Finally, I saved the cleaned version of the dataset as `newsbot_dataset_prepared.csv` so that I could load it quickly during further analysis.
+
+---
+
+### 8. Verifying Final Prepared Dataset
+
+To confirm that my data preparation steps were successful, I printed the shape of the cleaned dataset, reviewed the column names, and displayed the first few rows. This final verification step ensured that I had consistent column names, no missing data, and full article content ready for downstream NLP tasks like feature extraction, classification, and sentiment analysis.
